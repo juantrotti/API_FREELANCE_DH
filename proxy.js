@@ -7,7 +7,7 @@ const path = require("path");
 const multer = require("multer");
 
 const app = express();
-const port = 3001;
+const port = 3001 || process.env.PORT;
 
 // pasar a env
 const CLIENT_ID = process.env.CLIENT_ID;
