@@ -58,11 +58,20 @@ app.post("/proxy", upload.single("file"), async (req, res) => {
 
     fs.unlinkSync(filePath);
 
+    console.table(req.body);
+
     const newBody = {
       email: req.body.email,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
-      hourRate: req.body.salary,
+      len: req.body.len,
+      region: req.body.region,
+      portfolio: req.body.portfolio,
+      rol: req.body.rol,
+      ts: req.body.ts,
+      as: req.body.as,
+      interes: req.body.interes,
+      hourRate: req.body.hourRate,
       resumeLink: webViewLink,
     };
     console.log(newBody);
